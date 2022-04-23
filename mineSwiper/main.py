@@ -24,6 +24,19 @@ top_frame = Frame(
 
 top_frame.place(x=0, y=0)
 
+game_title = Label(
+  top_frame, 
+  bg='black',
+  fg='white',
+  text='MineSweeper Game, by Adalberto Filho',
+  font=('', 30),
+)
+
+game_title.place(
+  x=utils.width_prct(25),
+  y=utils.height_prct(7),
+)
+
 left_frame = Frame(
   root,
   bg='black',
@@ -53,6 +66,12 @@ for x in range(ss.GRID_SIZE):
       column=x,
       row=y
     )
+
+# calling the label from cell class 
+Cell.create_cell_count_label(left_frame)
+Cell.cell_count_label_object.place(
+  x=0,y=0
+  )
 
 Cell.randomize_mines()
 

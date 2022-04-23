@@ -86,11 +86,4 @@ while(True):
     imprimir_agenda(agenda)
 
   if opcao == 6:
-    exit()
-
-
-
-
-
-
-  
+    exit() 
