@@ -121,8 +121,14 @@ class Cell:
     #if question:
      # messagebox.askquestion(title='New Game', message='Press yes for new game')
     loose_game = messagebox.showerror(title='Game Over', message='Sorry, You Loose the Game!')
-    print(loose_game)
-    sys.exit()
+    new_game = messagebox.askquestion(title= "New Game", message="Press Yes for new Game")
+    if new_game == 'yes':
+      print("criar novo jogo")
+      
+    else:
+      print(loose_game)
+      sys.exit()
+
     # a logic to stop de game and display a message that player lost
     self.cell_btn_object.configure(
       bg = 'red',

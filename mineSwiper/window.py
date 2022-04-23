@@ -34,6 +34,46 @@ class Window(tk.Tk):
       y=utils.height_prct(7),
     )
 
+    left_frame = Frame(
+      self,
+      bg='black',
+      width=utils.width_prct(25),
+      height=utils.height_prct(75)
+    )
+
+    left_frame.place(x=0, y=utils.height_prct(25))
+
+    center_frame = Frame(
+      self,
+      bg='yellow',
+      width=utils.width_prct(75),
+      height=utils.height_prct(75)
+    )
+
+    center_frame.place(
+      x=utils.width_prct(25),
+      y=utils.height_prct(25)
+    )
+
+    for x in range(ss.GRID_SIZE):
+      for y in range(ss.GRID_SIZE):
+        c1 = Cell(x,y)
+        c1.create_btn_object(center_frame)
+        c1.cell_btn_object.grid(
+          column=x,
+          row=y
+        )
+
+# calling the label from cell class 
+    Cell.create_cell_count_label(left_frame)
+    Cell.cell_count_label_object.place(
+      x=0,y=0
+      )
+
+    Cell.randomize_mines()
+
+
+
     
 # área principal do programa
 
