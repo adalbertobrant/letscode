@@ -40,12 +40,11 @@ def buscar_contato(codPessoa, agenda):
   flag = True
   for i in range(len(agenda)):
     if agenda[i]['codigoPessoa'] == codPessoa:
-      print ("Contato encontrado")
+      print ("\nContato encontrado")
       flag = False
       return agenda[i]
   if flag:
-    return f"Contato não encontrado" 
-
+    return f"\nContato não encontrado\n" 
 
 def menu():
   print ("------------------------")
