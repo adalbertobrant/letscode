@@ -53,7 +53,7 @@ class Cell:
       self.show_cell()
       # if mines equals to cells left count , player won the Game
       if Cell.cell_count == ss.MINES_COUNT:
-        messagebox.showinfo(title="Winner", message="You won the Game")
+        messagebox.showinfo(title="---Winner---", message="  You won the Game  ")
         sys.exit()
 
 
@@ -120,7 +120,7 @@ class Cell:
     #question = messagebox.askretrycancel(title='Game Over', message="Game Over!!")
     #if question:
      # messagebox.askquestion(title='New Game', message='Press yes for new game')
-    loose_game = messagebox.showerror(title='Game Over', message='Sorry, You Losse the Game!')
+    loose_game = messagebox.showerror(title='Game Over', message='Sorry, You Loose the Game!')
     print(loose_game)
     sys.exit()
     # a logic to stop de game and display a message that player lost
