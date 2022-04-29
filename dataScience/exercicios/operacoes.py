@@ -1,28 +1,7 @@
 # ler dois números e realizar a operacao
+import operator
 
-def soma(x,y):
-  return x + y
-
-def divisao(x,y):
-  return x / y
-
-def divisaoInteira(x,y):
-  return x // y
-
-def multiplicacao(x,y):
-  return x * y
-
-def subtracao (x, y):
-  return x - y
-
-def resto (x, y):
-  return x % y
-
-def potenciacao(x,y):
-  return x ** y
-
-funcoes = [soma, divisao, divisaoInteira, multiplicacao, subtracao, resto, potenciacao]
-operacoes = {'soma':'+', 'divisao':'/', 'divisaoInteira':'//','multiplicacao':'*', 'subtracao':'-', 'resto':'%','potenciacao':'**'}
+operacoes = {'add':'+', 'divisao':'/', 'divisaoInteira':'//','multiplicacao':'*', 'subtracao':'-', 'resto':'%','potenciacao':'**'}
 
 x = float(input(f"Entre o primeiro número => "))
 
@@ -47,6 +26,6 @@ while True:
   else:
     print (" ")
     k = funcoes[op-1].__name__
-    print(f"{k.upper()} => {x} {operacoes.get(k)} {y} == {funcoes[op-1](x,y)}")
+    print(f"{k.upper()} => {x} {operacoes.get(k)} {y} == {operator.k(x,y)}")
 
      
